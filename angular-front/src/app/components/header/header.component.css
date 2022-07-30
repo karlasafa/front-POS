@@ -6,10 +6,10 @@ ul {
     background-color: black;
 }
  li {
-    float: left;
+    display: inline-block;
  }
  li a {
-    display: block;
+   display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
