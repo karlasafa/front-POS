@@ -1,8 +1,18 @@
 
+.box{
+    height: 11px;
+    width: 50px;
+    margin-top: -225px;
+    display: inline-block;
+    background: green;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 10px;
+}
 .img{
     height: 60px;
     max-width: 300px;
-    padding: 30px 20px;
+    padding: 50px 20px;
 }
 .desc{
     margin-left: 400px;
