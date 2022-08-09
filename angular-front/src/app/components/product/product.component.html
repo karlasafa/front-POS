@@ -7,35 +7,15 @@
     <p class="size">Handphone</p><br>
     <h1>Handphone Yeonjun</h1>
     <h4>IDR50.000.000</h4>
-    <a href="" class="btn">Edit</a>
-    <button class="btn2" id="myBtn">Delete</button>
+   <button [ngStyle]="{'display':this.btnprops1,'color':this.warna}"(click)="Muncul('block')">Delete</button>
+   <button>Edit</button>
     <h3>Product Details <i class="size"></i></h3>
     <br>
     <p>just handpnone idol </p>
     <p>The number of lines in a paragraph depends on the size of the browser window. If you resize the browser window, the number of lines in.</p>
     <p>mmmmmmmm</p>
 </div>
-<div id="myModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>mo delete ya?</p>
-        <button>ya</button>
-        <button>gak</button>
-    </div>
+<div [ngStyle]="{'display':this.props}">Are You Sure?
+    <button (click)="Muncul('none')">Yes</button>
+    <button (click)="Muncul('none')">No</button>
 </div>
-<script>
-    var modal = document.getElementById("myModal");
-    var btn = document.getElementById("myBtn");
-    var span = document.getElementsByClassName("close") [0];
-    btn.onclick = function(){
-        modal.style.display = "block";
-    }
-    span.onclick = function(){
-        modal.style.display = "none";
-    }
-    window.onclick = function(event){
-        if (event.target == modal){
-            modal.style.display = "none"
-        }
-    }
-</script>
