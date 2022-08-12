@@ -11,6 +11,7 @@ export class RekeningComponent implements OnInit {
   btnprops1 : any;
   userloggedIn = true;
   btnprops2: any;
+  btnprops3: any;
 
   constructor(private judulService: Title) { }
 
@@ -31,7 +32,7 @@ export class RekeningComponent implements OnInit {
     else{
       this.props = state;
       this.btnprops2 = 'none';
-      this.btnprops1 = 'block';
+      this.btnprops1 = 'block';     
     }
   }
 

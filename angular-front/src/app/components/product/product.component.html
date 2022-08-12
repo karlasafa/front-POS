@@ -15,7 +15,12 @@
     <p>The number of lines in a paragraph depends on the size of the browser window. If you resize the browser window, the number of lines in.</p>
     <p>mmmmmmmm</p>
 </div>
-<div class="test" [ngStyle]="{'display':this.props}">Are You Sure?
-    <button (click)="Muncul('none')">Yes</button>
-    <button (click)="Muncul('none')">No</button>
+<div class="test" *ngIf="this.props">
+<div class="content">
+    Are You Sure?
+    <div class="tombol">
+    <button (click)="Muncul(false)">Yes</button>
+    <button (click)="Muncul(false)">No</button>
+    </div>
+</div>
 </div>
