@@ -8,16 +8,27 @@
     <tr>
         <td>Riana</td>
         <td>BCA</td>
-        <td><button [ngStyle]="{'display':this.btnprops1}"(click)="Muncul('block')">Delete</button></td>
+        <td><button [ngStyle]="{'display':this.btnprops1}"(click)="Muncul('block')">Delete</button>
+            <button [ngStyle]="{'display':this.btnprops2}"(click)="Muncul('none')">Delete</button>
+       </td>
+
     </tr>
     <tr>
         <td>Geraldy</td>
         <td>Mandiri</td>
-        <td><button [ngStyle]="{'display':this.btnprops1}"(click)="Muncul('block')">Delete</button></td>
+        <td><button [ngStyle]="{'display':this.btnprops1}"(click)="Muncul('block')">Delete</button>
+            <button [ngStyle]="{'display':this.btnprops2}"(click)="Muncul('none')">Yes</button>
+            <button [ngStyle]="{'display':this.btnprops2}"(click)="Muncul('none')">No</button></td>
     </tr>
     <tr>
         <td>Dawn</td>
         <td>Bank Mega</td>
-        <td><button [ngStyle]="{'display':this.btnprops1}"(click)="Muncul('block')">Delete</button></td>
+        <td><button [ngStyle]="{'display':this.btnprops1}"(click)="Muncul('block')">Delete</button>
+            <button [ngStyle]="{'display':this.btnprops2}"(click)="Muncul('none')">Delete</button></td>
     </tr>
-</table>
+</table> 
+/*<ng-template [ngIf]=>
+    <div>
+      Hello User.
+    </div>
+  </ng-template>*/
