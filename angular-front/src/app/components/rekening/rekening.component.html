@@ -1,36 +1,23 @@
 <app-header></app-header>
 <table>
     <tr>
+        <th>Number</th>
         <th>Name</th>
         <th>Rekening</th>
         <th>coba</th>
     </tr>
-    <tr>
-        <td>Riana</td>
-        <td>BCA</td>
-        <td><button [ngStyle]="{'display':this.btnprops1}"(click)="Muncul('block')">Delete</button>
-            <button [ngStyle]="{'display':this.btnprops2}"(click)="Muncul('none')">Delete</button>
-       </td>
+    <tr *ngFor='let user of this.datausers; let i = index;'>
+        <td>{{i+1}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.rekening}}</td>
+        <td><button [ngStyle]="{'display':this.btnprops1}"(click)="Muncul('block')">Delete</button></td>
 
     </tr>
-    <tr>
-        <td>Geraldy</td>
-        <td>Mandiri</td>
-        <td><button [ngStyle]="{'display':this.btnprops1}"(click)="Muncul('block')">Delete</button>
-            <div [ngStyle]="{'display':this.btnprops2}">
-                <button (click)="Muncul('none')">Yes</button>
-                <button (click)="Muncul('none')">No</button>
-            </div></td>
-    </tr>
-    <tr>
-        <td>Dawn</td>
-        <td>Bank Mega</td>
-        <td><button [ngStyle]="{'display':this.btnprops1}"(click)="Muncul('block')">Delete</button>
-            <button [ngStyle]="{'display':this.btnprops2}"(click)="Muncul('none')">Delete</button></td>
-    </tr>
-</table> 
-<ng-template [ngIf]=>
+ </table> 
+ <div *ngIf="this.props">
     <div>
-      Hello User.
+        Delete nih?
+    <div><button (click)="Muncul(false)">Ya</button>
+    <button (click)="Muncul(false)">Ga</button></div>
     </div>
-  </ng-template>
+ </div>  

@@ -8,30 +8,41 @@ import { Title } from '@angular/platform-browser';
 })
 export class RekeningComponent implements OnInit {
   props : any;
-  btnprops1 : any;
-  userloggedIn = true;
-  btnprops2: any;
-  btnprops3: any;
+  btnprops1: any;
+  datausers: any;
 
   constructor(private judulService: Title) { }
 
   ngOnInit(): void {
     this.judulService.setTitle('Rekening Page');
-    this.props='block';
-    this.btnprops1='block';
-    this.btnprops2='none';
+    this.datausers = [
+      {
+      id:1,
+      name:"Severus",
+      rekening:"BCA"
+      },
+      {
+        id:2,
+        name:"Lily",
+        rekening:"Mandiri"
+      },
+      {
+        id:3,
+        name:"Nastaya",
+        rekening:"BNI"
+
+      }
+    ]
 
   }
   Muncul(state:any){
 
-    if(state === 'block'){
+    if(state){
       this.props = state;
       this.btnprops1 = 'none';
-      this.btnprops2 = state
     }
     else{
       this.props = state;
-      this.btnprops2 = 'none';
       this.btnprops1 = 'block';     
     }
   }
