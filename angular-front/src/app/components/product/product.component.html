@@ -8,7 +8,7 @@
     <h1>Handphone Yeonjun</h1>
     <h4>IDR50.000.000</h4>
    <button [ngStyle]="{'display':this.btnprops1,'color':this.warna}"(click)="Muncul('block')">Delete</button>
-   <button >Edit</button>
+   <button [ngStyle]="{'display':this.btnprops2}"(click)="Ada('block')">Edit</button>
     <h3>Product Details <i class="size"></i></h3>
     <br>
     <p>just handpnone idol </p>
@@ -22,5 +22,15 @@
     <button (click)="Muncul(false)">Yes</button>
     <button (click)="Muncul(false)">No</button>
     </div>
+</div>
+<div class="container" *ngIf="this.props2">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Edit">
+
+    <label for="name">Price</label>
+    <input type="text" id="name" name="price" placeholder="Edit">
+
+    <input type="submit" value="Edit" (click)="Ada(false)">
+
 </div>
 

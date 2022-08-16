@@ -9,19 +9,38 @@ import { Title } from '@angular/platform-browser';
 export class AdminComponent implements OnInit {
   props : any;
   btnprops1 : any;
+  datausers : any;
 
   constructor(private judulService: Title) { }
 
   ngOnInit(): void {
     this.judulService.setTitle('Admin Page');
-    this.props='block'
-    this.btnprops1='block'
+    this.datausers = [
+      {
+        id:1,
+        name:"James",
+        position:"Directur",
+        email:"James999@gmail.com"
+
+      },
+      {
+        id:2,
+        name:"Lily",
+        position:"Manager",
+        email:"Risakaaa@gmail.com"
+      },
+      {
+        id:3,
+        name:"Haruka",
+        position:"Staff",
+        email:"Haruka48@gmail.com"
+      }
+    ]
 
   }
-
   Muncul(state:any){
 
-    if(state === 'block'){
+    if(state){
       this.props = state;
       this.btnprops1 = 'none';
     }

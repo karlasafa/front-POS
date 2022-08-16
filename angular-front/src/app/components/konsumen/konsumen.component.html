@@ -1,28 +1,22 @@
 <app-header></app-header>
 <table>
     <tr>
+        <th>Number</th>
         <th>Name</th>
-        <th>Phone</th>
         <th>Email</th>
         <th>coba</th>
     </tr>
-    <tr>
-        <td>Riana</td>
-        <td>0812676790</td>
-        <td>RianaScared@gmail.com</td>
-        <td><button [ngStyle]="{'display':this.btnprops1}"(click)="Muncul('block')">Delete</button></td>
-    </tr>
-    <tr>
-        <td>Geraldy</td>
-        <td>088898765</td>
-        <td>GeraldyTy@gmail.com</td>
-        <td><button [ngStyle]="{'display':this.btnprops1}"(click)="Muncul('block')">Delete</button></td>
-    </tr>
-    <tr>
-        <td>Dawn</td>
-        <td>0875454531</td>
-        <td>Twilight@gmail.com</td>
+    <tr *ngFor="let user of this.datausers; let i = index;">
+        <td>{{i+1}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
         <td><button [ngStyle]="{'display':this.btnprops1}"(click)="Muncul('block')">Delete</button></td>
     </tr>
 </table>
-
+<div class="test" *ngIf="this.props">
+    <div class="content">
+        Are You Sure?
+    <div class="tombol"><button (click)="Muncul(false)">Ya</button>
+    <button (click)="Muncul(false)">Ga</button></div>
+    </div>
+ </div>  

@@ -10,28 +10,36 @@ export class ProductComponent implements OnInit {
   props : any;
  btnprops1: any;
   warna: any;
+  btnprops2: any;
+  props2: any;
 
   constructor(private judulService: Title) { }
 
   ngOnInit(): void {
     this.judulService.setTitle('Product Page');
-   // this.props='block';
-   // this.btnprops1='block';
-    //this.warna='red'
   }
 
   Muncul(states:any){
     if(states){
      this.props = states
-     // this.btnprops1 = 'none'
       this.warna = 'green'
 
     }
     else{
       this.props = states
-   // this.btnprops1 ='block'
       this.warna ='red'
+    }
+  }
+  Ada(state:any){
+    if(state){
+      this.props2 = state;
+      this.btnprops2 = 'none';
+    }
+    else{
+      this.props2 = state;
+      this.btnprops2 = 'block';
     }
   }
 
 }
+
