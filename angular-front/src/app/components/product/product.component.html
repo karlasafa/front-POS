@@ -7,8 +7,8 @@
     <p class="size">Handphone</p><br>
     <h1>Handphone Yeonjun</h1>
     <h4>IDR50.000.000</h4>
-   <button [ngStyle]="{'display':this.btnprops1,'color':this.warna}"(click)="Muncul('block')">Delete</button>
-   <button [ngStyle]="{'display':this.btnprops2}"(click)="Ada('block')">Edit</button>
+   <button (click)="Muncul(true)">Delete</button>
+   <button (click)="Ada(true)">Edit</button>
     <h3>Product Details <i class="size"></i></h3>
     <br>
     <p>just handpnone idol </p>
@@ -23,7 +23,9 @@
     <button (click)="Muncul(false)">No</button>
     </div>
 </div>
-<div class="container" *ngIf="this.props2">
+</div>
+<div class="test" *ngIf="this.props2">
+    <div class="content2">
     <label for="name">Name</label>
     <input type="text" id="name" name="name" placeholder="Edit">
 
@@ -31,6 +33,7 @@
     <input type="text" id="name" name="price" placeholder="Edit">
 
     <input type="submit" value="Edit" (click)="Ada(false)">
-
+    </div>
 </div>
+<div class="modal-background" *ngIf="this.props || this.props2"></div>
 

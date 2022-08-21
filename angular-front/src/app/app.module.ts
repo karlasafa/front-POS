@@ -10,6 +10,7 @@ import { AdminComponent } from './components/admin/admin.component';
 import { ProductComponent } from './components/product/product.component';
 import { RekeningComponent } from './components/rekening/rekening.component';
 import { KonsumenComponent } from './components/konsumen/konsumen.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { KonsumenComponent } from './components/konsumen/konsumen.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [Title],
   bootstrap: [AppComponent]
