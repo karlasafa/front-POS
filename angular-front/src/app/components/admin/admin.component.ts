@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { PostService } from 'src/app/services/post.service';
 
 @Component({
   selector: 'app-admin',
@@ -10,34 +11,23 @@ export class AdminComponent implements OnInit {
   props : any;
   btnprops1 : any;
   datausers : any;
+  data : any
+  totaldata : any
+  people : any
 
-  constructor(private judulService: Title) { }
+  constructor(private judulService: Title,private service: PostService) { }
 
   ngOnInit(): void {
     this.judulService.setTitle('Admin Page');
-    this.datausers = [
-      {
-        id:1,
-        name:"James",
-        position:"Directur",
-        email:"James999@gmail.com"
+    this.service.getPeople() 
+    .subscribe(response => {
+      this.data= response
+      this.totaldata= this.data.count
+      this.people= this.data.results
+      console.log(this.people)
 
-      },
-      {
-        id:2,
-        name:"Lily",
-        position:"Manager",
-        email:"Risakaaa@gmail.com"
-      },
-      {
-        id:3,
-        name:"Haruka",
-        position:"Staff",
-        email:"Haruka48@gmail.com"
-      }
-    ]
-
-  }
+  })
+}
   Muncul(state:any){
 
     if(state){

@@ -3,16 +3,15 @@
     <tr>
         <th>Number</th>
         <th>Name</th>
-        <th>Position</th>
-        <th>Email</th>
-        <th>coba</th>
+        <th>Birth</th>
+        <th>Gender</th>
     </tr>
-    <tr *ngFor="let user of this.datausers; let i = index;">
+    <tr *ngFor="let people of this.people; let i = index;">
         <td>{{i+1}}</td>
-        <td>{{user.name}}</td>
-        <td>{{user.position}}</td>
-        <td>{{user.email}}</td>
-        <td><button [ngStyle]="{'display':this.btnprops1}"(click)="Muncul('block')">Delete</button></td>
+        <td>{{people.name}}</td>
+        <td>{{people.birth_year}}</td>
+        <td>{{people.gender}}</td>
+        <!-- <td><button [ngStyle]="{'display':this.btnprops1}"(click)="Muncul('block')">Delete</button></td> -->
     </tr>
 </table>
 <div class="test" *ngIf="this.props">

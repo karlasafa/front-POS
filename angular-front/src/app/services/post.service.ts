@@ -5,12 +5,15 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class PostService {
-  private url = "https://swapi.dev/api/planets/1/";
+  private url = "https://swapi.dev/api/";
    
   constructor(private httpClient: HttpClient) { }
   
-  getPosts(){
-    return this.httpClient.get(this.url);
+  getPlanets(){
+    return this.httpClient.get(this.url+'planets');
+  }
+  getPeople(){
+    return this.httpClient.get(this.url+'people');
   }
   
 }

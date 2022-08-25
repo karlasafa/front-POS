@@ -1,16 +1,18 @@
 <app-header></app-header>
+<h3>total data:{{totaldata}}</h3>
 <table>
     <tr>
         <th>Number</th>
         <th>Name</th>
-        <th>Email</th>
-        <th>coba</th>
+        <th>Climate</th>
+        <th>Diameter</th>
     </tr>
-    <tr *ngFor="let user of this.datausers; let i = index;">
+    <tr *ngFor="let planet of this.planet; let i = index;">
         <td>{{i+1}}</td>
-        <td>{{user.name}}</td>
-        <td>{{user.email}}</td>
-        <td><button [ngStyle]="{'display':this.btnprops1}"(click)="Muncul('block')">Delete</button></td>
+        <td>{{planet.name}}</td>
+        <td>{{planet.climate}}</td>
+        <td>{{planet.diameter}}</td>
+        <!-- <td><button [ngStyle]="{'display':this.btnprops1}"(click)="Muncul('block')">Delete</button></td> -->
     </tr>
 </table>
 <div class="test" *ngIf="this.props">

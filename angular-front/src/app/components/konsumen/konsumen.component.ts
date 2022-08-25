@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { EmailValidator } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
+import { PostService } from 'src/app/services/post.service';
+
 
 @Component({
   selector: 'app-konsumen',
@@ -11,30 +13,20 @@ export class KonsumenComponent implements OnInit {
   props : any;
   btnprops1 : any;
   datausers : any;
+  data : any
+  totaldata : any
+  planet : any
 
-  constructor(private judulService: Title) { }
+  constructor(private judulService: Title,private service: PostService) { }
 
   ngOnInit(): void {
-    this.judulService.setTitle('Konsumen Page');
-    this.datausers = [
-      {
-        id:1,
-        name:"Mika",
-        email:"mikatambayong@gmail.com"
-
-      },
-      {
-        id:2,
-        name:"Riska",
-        email:"Risakaaa@gmail.com"
-      },
-      {
-        id:3,
-        name:"Kinan",
-        email:"KINAN22@gmail.com"
-      }
-    ]
-
+   this.service.getPlanets() 
+    .subscribe(response => {
+      this.data= response
+      this.totaldata= this.data.count
+      this.planet= this.data.results
+      console.log(this.planet)
+    })
   }
   Muncul(state:any){
 
