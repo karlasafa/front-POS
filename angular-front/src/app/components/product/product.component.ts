@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { PostService } from 'src/app/services/post.service';
 
 @Component({
   selector: 'app-product',
@@ -12,11 +13,19 @@ export class ProductComponent implements OnInit {
   warna: any;
   btnprops2: any;
   props2: any;
+  data: any;
+  starships: any;
 
-  constructor(private judulService: Title) { }
+  constructor(private judulService: Title,private service: PostService) { }
 
   ngOnInit(): void {
     this.judulService.setTitle('Product Page');
+    this.service.getStarships()
+    .subscribe(response =>{
+      this.data = response
+      this.starships = this.data.results
+      console.log(this.data)
+    }) 
   }
 
   Muncul(states:any){

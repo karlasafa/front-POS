@@ -38,4 +38,21 @@
 </div>
 <div class="modal-background" *ngIf="this.props || this.props2"></div>
 </div>
+<div *ngFor="let starships of this.starships; let i= index;">
+    <div class="img">
+        <img src="/assets/img/yeonjun22.jpg" width="100%" id="ProductImg">
+        </div>
+        <div class="desc">
+            <p class="size">{{starships.name}}</p><br>
+            <h1>{{starships.model}}</h1>
+            <h4>{{starships.cargo_capacity}}</h4>
+           <!-- <button (click)="Muncul(true)">Delete</button> -->
+           <!-- <button (click)="Ada(true)">Edit</button> -->
+            <h3>Product Details <i class="size"></i></h3>
+            <br>
+            <p>{{starships.crew}}</p>
+            <p>{{starships.manufacturer}}</p>
+            <p>mmmmmmmm</p>
+        </div>  
+</div>
 

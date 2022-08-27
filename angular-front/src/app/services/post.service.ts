@@ -15,5 +15,8 @@ export class PostService {
   getPeople(){
     return this.httpClient.get(this.url+'people');
   }
+  getStarships(){
+    return this.httpClient.get(this.url+'starships');
+  }
   
 }
