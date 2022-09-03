@@ -110,5 +110,28 @@ a {
     left: 0;
     background-color: rgba(0, 0, 0, .9);
   }
+  .kotak {
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .gambar {
+    height: 180px;
+    width: 180px;
+    position: absolute;
+    float: left;
+  }
+  .deskripsi {
+    height: 160px;
+    width: 88%;
+    margin-left: 300px;
+    font-style: italic;
+  }
+  b {
+    font-size: x-large;
+  }
 
 
